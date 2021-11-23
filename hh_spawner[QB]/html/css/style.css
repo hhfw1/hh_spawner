@@ -1,0 +1,181 @@
+
+body {
+ user-select: none;
+ font-family: Arial, Helvetica, sans-serif;
+}
+
+.main-map-container {
+ display: none;
+ position: absolute;
+ left: -150vh;
+}
+
+.map-text {
+ position: absolute;
+ left: 81vh;
+ top: 14vh;
+ width: 35vh;
+ float: left;
+}
+
+.map-text > p {
+ font-size: 2.5vh;
+ color: aliceblue;
+ font-weight: 600;
+ text-shadow: 2px 2px 2px #000000;
+}
+
+.map {
+ position: absolute;
+ top: -15vh;
+ left: 55.2vh;
+ width: 70vh;
+ height: 130vh;
+ border-radius: 10px;
+ transform: rotate(270deg);
+ box-shadow: 0px 0px 6px rgb(5, 5, 5);
+}
+
+.spawn-dots > i, .appartment-dots > i, .jail-dots > i {
+ color: rgb(255, 0, 0);
+ font-size: 2vh;
+ text-shadow: 2px 2px 2px #000000;
+}
+   
+[data-dotnum="spawn1"] {
+ position: absolute;
+ left: 99vh;
+ top: 48vh;
+}
+   
+[data-dotnum="spawn2"] {
+ position: absolute;
+ left: 93vh;
+ top: 49vh;
+}
+   
+[data-dotnum="spawn3"] {
+ position: absolute;
+ left: 99.5vh;
+ top: 60vh;
+}
+   
+[data-dotnum="spawn4"] {
+ position: absolute;
+ left: 45vh;
+ top: 51vh;
+}
+
+[data-dotnum="spawn5"] {         
+ position: absolute;
+ left: 64vh;                    
+ top: 38vh;
+}
+
+[data-dotnum="apartment1"] {
+ position: absolute;
+ left: 98vh;
+ top: 57.5vh;
+}
+
+[data-dotnum="apartment2"] {
+ position: absolute;
+ left: 93.5vh;
+ top: 58.7vh;
+}
+
+[data-dotnum="apartment3"] {
+ position: absolute;
+ left: 96.5vh;
+ top: 48.5vh;
+}
+
+[data-dotnum="apartment4"] {
+ position: absolute;
+ left: 89.3vh;
+ top: 51.5vh;
+}
+
+[data-dotnum="apartment5"] {
+ position: absolute;
+ left: 99vh;
+ top: 47.5vh;
+}
+
+[data-dotnum="jail"] {
+ position: absolute;
+ left: 86.1vh;
+ top: 41vh;
+}
+
+.last-location-button {
+ position: absolute;
+ top: 75vh;
+ left: 128vh;
+ border-radius: 5px;
+ border: 2px solid rgb(85, 85, 85);
+ background-color: rgb(46, 96, 189);
+ width: 15.55vh;
+ height: 2.6vh;
+}
+
+.last-location-button > p {
+ text-align: center;
+ margin-top: 0.4vh;
+ color: rgb(255, 255, 255);
+ font-size: 1.5vh;
+ font-weight: 650;
+ font-family: Arial, Helvetica, sans-serif;
+ text-shadow: 2px 2px 2px #000000;
+}
+
+[data-dotnum="lastlocation"] {
+ position: absolute;
+ left: 128vh;
+ top: 75vh;
+}
+
+.spawn-dots > i:hover, .appartment-dots > i:hover, .jail-dots:hover {
+ color: rgb(0, 255, 0);
+}
+
+.last-location-button:hover {
+ background-color: rgb(39, 83, 167);
+}
+
+.tooltiptext {
+ visibility: hidden;
+ width: 120px;
+ background-color: #555;
+ color: #fff;
+ font-weight: 650;
+ font-family: Arial, Helvetica, sans-serif;
+ box-shadow: 0px 0px 6px rgb(5, 5, 5);
+ text-shadow: 1px 1px 2px #000000;
+ text-align: center;
+ padding: 5px 0;
+ border-radius: 6px;
+ position: absolute;
+ z-index: 1;
+ bottom: 145%;
+ left: 50%;
+ margin-left: -60px;
+ opacity: 0;
+ transition: opacity 0.3s;
+}
+  
+.tooltiptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #555 transparent transparent transparent;
+}
+  
+.spawn-dots:hover .tooltiptext, .appartment-dots:hover .tooltiptext, .jail-dots:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+}
